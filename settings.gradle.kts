@@ -14,5 +14,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "RebuildPOS"
-include(":app")
-include(":demo")
+include(":admin")
+include(":user")
