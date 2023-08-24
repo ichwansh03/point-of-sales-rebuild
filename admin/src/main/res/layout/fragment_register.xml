@@ -1,14 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".auth.presentation.RegisterFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/business_title"
+        style="@style/TextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_input_start_end"
+        android:layout_marginTop="@dimen/dimen_input_top_bottom"
+        android:text="@string/business_data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/business_name_field_register"
+        style="@style/MarginInputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/business_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/business_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_bus_name_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/business_type_field_register"
+        style="@style/MarginInputDropDownText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/business_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/business_name_field_register">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/input_bus_type_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            app:simpleItems="@array/business_type" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlet_type_field_register"
+        style="@style/MarginInputDropDownText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/outlet_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/business_type_field_register">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/input_outlet_type_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            app:simpleItems="@array/business_type" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/business_address_field_register"
+        style="@style/MarginInputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/outlet_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/outlet_type_field_register">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_bus_address_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="textMultiLine" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/personal_title"
+        style="@style/TextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_input_start_end"
+        android:layout_marginTop="@dimen/dimen_input_top_bottom"
+        android:text="@string/personal_data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/business_address_field_register" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_field_register"
+        style="@style/MarginInputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/personal_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_name_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/address_field_register"
+        style="@style/MarginInputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_field_register">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_address_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="textMultiLine" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/whatsapp_field_register"
+        style="@style/MarginInputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/whatsapp_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address_field_register">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_whatsapp_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="phone" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pos_field_register"
+        style="@style/MarginInputDropDownText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/position"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/whatsapp_field_register">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/input_pos_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="phone"
+            app:simpleItems="@array/position" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_field_register"
+        style="@style/MarginInputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pos_field_register">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_email_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_field_register"
+        style="@style/MarginInputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_field_register">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_password_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/conf_password_field"
+        style="@style/MarginInputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/confirm_password"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_field_register">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/button_register"
+        style="@style/CardViewButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conf_password_field">
+
+        <TextView
+            style="@style/TextInCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register" />
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
