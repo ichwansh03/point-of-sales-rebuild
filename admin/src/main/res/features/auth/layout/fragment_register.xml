@@ -231,7 +231,7 @@
         app:layout_constraintTop_toBottomOf="@id/password_field_register">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/input_password"
+            android:id="@+id/input_conf_password_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"

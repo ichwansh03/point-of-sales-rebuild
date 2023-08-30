@@ -34,7 +34,17 @@ android {
         jvmTarget = Versions.jvmTarget
     }
     buildFeatures {
+        buildConfig = true
         viewBinding = true
+    }
+    sourceSets {
+        getByName("main") {
+            res {
+                srcDirs("src/main/res", "src/main/res/features/auth",
+                    "src/main/res/features/products", "src/main/res/features/reports", "src/main/res/features/outlets"
+                )
+            }
+        }
     }
 }
 
@@ -45,6 +55,9 @@ dependencies {
     implementation(Libraries.constraintLayout)
     implementation(Libraries.navFragment)
     implementation(Libraries.navUi)
+    implementation(Libraries.retrofit)
+    implementation(Libraries.converterGson)
+    implementation(Libraries.logInterceptor)
     testImplementation(TestLibraries.junit)
     androidTestImplementation(TestLibraries.extJunit)
     androidTestImplementation(TestLibraries.espresso)
