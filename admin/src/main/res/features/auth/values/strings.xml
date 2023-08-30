@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_auth">Authentication Admin</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="personal_data">Personal Data</string>
+    <string name="address">Address</string>
+    <string name="name">Name</string>
+    <string name="whatsapp_number">Whatsapp Number</string>
+    <string name="position">Position</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="business_data">Business Data</string>
+    <string name="business_name">Business Name</string>
+    <string name="business_type">Business Type</string>
+    <string name="outlet_address">Outlet Address</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="outlet_type">Outlet Type</string>
+    <array name="position">
+        <item>Manager</item>
+        <item>Admin</item>
+        <item>Employee</item>
+    </array>
+
+    <array name="business_type">
+        <item>Culinary</item>
+        <item>Fashion</item>
+        <item>Automotive</item>
+        <item>Internet &amp; Technology</item>
+        <item>Agribusiness</item>
+        <item>Furniture</item>
+        <item>Creative Product</item>
+        <item>Others</item>
+    </array>
+
+    <array name="outlet_type">
+        <item>Store Centre</item>
+        <item>Branch</item>
+    </array>
+    <string name="title_buildsrc">Build Source</string>
+    <string name="product">Product</string>
+    <string name="report">Report</string>
+    <string name="outlets">Outlets</string>
+</resources>

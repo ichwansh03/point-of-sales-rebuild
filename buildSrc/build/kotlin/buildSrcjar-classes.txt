@@ -1,0 +1,1 @@
+/root/AndroidStudioProjects/RebuildPOS/buildSrc/build/classes/kotlin/main/ApplicationConfig.class:/root/AndroidStudioProjects/RebuildPOS/buildSrc/build/classes/kotlin/main/Libraries.class:/root/AndroidStudioProjects/RebuildPOS/buildSrc/build/classes/kotlin/main/TestLibraries.class:/root/AndroidStudioProjects/RebuildPOS/buildSrc/build/classes/kotlin/main/Versions.class
