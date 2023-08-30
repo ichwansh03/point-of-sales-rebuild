@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigate_feature"
+    app:startDestination="@id/mainActivity2">
+
+    <activity
+        android:id="@+id/mainActivity2"
+        android:name="com.ichwan.rebuildpos.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.ichwan.rebuildpos.product.presentation.ProductFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product" />
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.ichwan.rebuildpos.report.presentation.ReportsFragment"
+        android:label="fragment_reports"
+        tools:layout="@layout/fragment_reports" />
+    <fragment
+        android:id="@+id/outletsFragment"
+        android:name="com.ichwan.rebuildpos.outlets.presentation.OutletsFragment"
+        android:label="fragment_outlets"
+        tools:layout="@layout/fragment_outlets" />
+</navigation>
