@@ -17,9 +17,11 @@ object Versions {
     val appCompat = "1.6.1"
     val material = "1.9.0"
     val constraintLayout = "2.1.4"
-    val retrofit = "2.7.0"
+    val retrofit = "2.9.0"
     val room = "2.2.3"
+    val glide = "4.15.1"
     val junit = "4.13.2"
+    val loggingInterceptor = "4.10.0"
     val extjunit = "1.1.5"
     val espressoCore = "3.5.1"
 }
@@ -32,6 +34,12 @@ object Libraries {
 
     val navFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navVersion}"
     val navUi = "androidx.navigation:navigation-ui-ktx:${Versions.navVersion}"
+
+    val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    val converterGson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+    val logInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
+
+    val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
 }
 
 object TestLibraries {
