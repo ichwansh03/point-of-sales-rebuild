@@ -7,9 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.ichwan.rebuildpos.R
+import com.ichwan.rebuildpos.auth.domain.LoginService
 import com.ichwan.rebuildpos.databinding.FragmentLoginBinding
 
-class LoginFragment : Fragment() {
+class LoginFragment : Fragment(), LoginService {
 
     private lateinit var binding: FragmentLoginBinding
 
@@ -20,13 +21,26 @@ class LoginFragment : Fragment() {
         binding = FragmentLoginBinding.inflate(inflater, container, false)
 
         binding.apply {
+            with(Navigation){
+                buttonRegister.setOnClickListener {
+                    findNavController(requireView()).navigate(R.id.login_to_registerFragment)
+                }
+                txForgotPassword.setOnClickListener {
+                    findNavController(requireView()).navigate(R.id.forgotpassword_to_loginActivity)
+                }
 
-            buttonRegister.setOnClickListener {
-                Navigation.findNavController(requireView()).navigate(R.id.action_to_registerFragment)
             }
+//                with(Navigation) {
+//                    findNavController(requireView()).navigate(R.id.login_to_registerFragment)
+//                }
+
         }
 
         return binding.root
+    }
+
+    override fun validate(email: String, password: String) {
+        TODO("Not yet implemented")
     }
 
 }
