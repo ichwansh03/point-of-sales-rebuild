@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/input_category_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_marginStart="@dimen/dimen_input_start_end"
+        android:layout_marginTop="@dimen/dimen_input_top_bottom"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#A4A4A4"
+        android:layout_marginStart="@dimen/dimen_input_start_end"
+        android:layout_marginEnd="@dimen/dimen_input_start_end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_category"/>
+
+    <ImageButton
+        android:id="@+id/edit_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit"
+        android:background="@android:color/transparent"
+        android:layout_marginEnd="@dimen/dimen_input_start_end"
+        android:layout_marginTop="@dimen/dimen_input_top_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/remove_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        android:background="@android:color/transparent"
+        android:layout_marginEnd="@dimen/dimen_input_start_end"
+        android:layout_marginTop="@dimen/dimen_input_top_bottom"
+        app:layout_constraintEnd_toStartOf="@id/edit_category"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

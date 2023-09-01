@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_product">Search Product</string>
+    <string name="add_product">Add Product</string>
+    <string name="category_product">Category Product</string>
+    <string name="optional">Optional</string>
+    <string name="add_detail_info">Add detail info</string>
+    <string name="save">Save</string>
+    <string name="product_category">Product Category</string>
+    <string name="delete">Delete</string>
+</resources>
